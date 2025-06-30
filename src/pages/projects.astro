@@ -3,50 +3,88 @@ import Layout from "../layouts/Layout.astro";
 import Experience from "../components/Card.astro";
 ---
 
-<Layout title="Projects - Muhammad Wasif">
+<Layout title="Projects - Amna Rafi">
   <main>
-    <h2>I've built hundreds of sites and apps. Here are a few of them.</h2>
+    <h2>Designs, Games & Desktop Tools I've Worked On</h2>
     <p>
-      Within my career, I have worked on variety of Web3 and blockchain relevant
-      projects. I have always tried to implement the best and optimal solution
-      to the every problem I encounter. With a huge experience in building front
-      end applications with <b>React & Next.js</b>, I have worked with
-      technologies like <b>NestJS</b> & <b>GraphQL</b> to develop back-end RESTful
-      APIs.
-    </p>
-    <p>
-      Besides tradional web development, I have also explored <i>Metaverse</i> world
-      while developing applications on <b>Decentraland</b> (MANA). with DCL SDK and
-      JavaScript physics engines. <br />
-      Here are few of the projects, I have worked on
+      I’ve explored product design, immersive game development, and desktop applications across various domains. Below are some featured works — from UI/UX projects in Figma to a VR zombie game and a collaborative university platform.
     </p>
 
+    <!-- 🌐 Figma Design Projects -->
+    <h3 style="margin-top: 3rem;">Figma UI/UX Projects</h3>
+
     <Experience
-      title="IU Meta Stadium"
-      description="IU Meta is a 3D stadium in Decentraland, owned by Islamabad United (a PSL cricket team). With LaLiga Land in its neighbors, IU Meta is an interactive stadium where you can complete different challenges to get rewards (NFTs, wearables & assets). I got an opportunity to work on Decentraland SDK (in TypeScript) to develop and deploy the stadium in Decentraland."
-      subtitle="World's first cricket metaverse stadium"
-      links={[
-        { text: "Website", href: "https://metastadium.io/stadium" },
-        {
-          text: "Visit stadium",
-          href: "https://play.decentraland.org/?NETWORK=mainnet&position=-146%2C76&realm=dg&island=dg2wxn",
-        },
-      ]}
-      image="/images/u-meta.png"
+      title="Embrace the Future"
+      description="A futuristic interface design showcasing animation, movement, and emotion in modern UI. It explores advanced motion principles and visual storytelling for immersive design systems."
+      subtitle="Figma Prototype"
+      links={[{ text: "View Design", href: "https://www.figma.com/design/ecW83yya3OMCqOaBO5MhlD/animation-circle?node-id=3-2" }]}
+      image="/images/figma1.svg"
     />
+
     <Experience
-      title="Atlas DEX"
-      description="During my work at Ideofuzion, I got oppurtunity to work on Atlas DEX. Atlas DEX is first ever cross-chain aggregator from Solana to EVM chains. You can swap tokens & stake/unstake on multiple chains. \n My responsibilites inluded developing the responsive design of application and integrating APIs and contracts on front-end side."
-      subtitle="Cross-chain DEX aggregator"
-      links={[{ text: "Visit app", href: "https://app.atlasdex.finance/swap" }]}
-      image="/images/atlas.png"
+      title="We Escape: Your Travel Companion"
+      description="A travel booking app with intuitive navigation, personalized experiences, and clean UI. It combines visual clarity with smooth booking flows for travelers."
+      subtitle="Figma Prototype"
+      links={[{ text: "View Design", href: "https://www.figma.com/design/3lqoVp1LYDdCX2SWXogpBM/booking-app?node-id=0-1" }]}
+      image="/images/figma2.svg"
+    />
+
+    <Experience
+      title="Login & Connect"
+      description="A minimalist login and signup flow emphasizing user clarity, fast access, and component-based design consistency across platforms."
+      subtitle="Figma Prototype"
+      links={[{ text: "View Design", href: "https://www.figma.com/design/Ua2hqcdVEMYzXolJA3Vs3P/login-signup" }]}
+      image="/images/figma3.svg"
+    />
+
+    <Experience
+      title="Delicious Dash"
+      description="A playful UI concept for a donut and food ordering app, blending delightful colors with bold visuals to enhance user appetite and interaction."
+      subtitle="Figma Prototype"
+      links={[{ text: "View Design", href: "https://www.figma.com/design/IJSjZqdeu7quiXzfbN0LGQ/food-donuts" }]}
+      image="/images/figma4.svg"
+    />
+
+    <Experience
+      title="Shufti Revamp"
+      description="A redesign concept to improve the interface of Shufti. Focused on usability, simplicity, and brand consistency with clear call-to-action elements."
+      subtitle="Figma Prototype"
+      links={[{ text: "View Design", href: "https://www.figma.com/design/EAdiDiSn7QwpbQL4qdz94Q/shufti-redesigned" }]}
+      image="/images/figma5.svg"
+    />
+
+    <Experience
+      title="Portfolio Website"
+      description="My personal portfolio website — structured, clean, and responsive. Showcases my work, background, and design philosophy in a compelling layout."
+      subtitle="Figma Prototype"
+      links={[{ text: "View Design", href: "https://www.figma.com/design/OLJu0QPYO8JkujB2xptgoG/portfolio-website?node-id=1-14500" }]}
+      image="/images/figma6.svg"
+    />
+
+    <!-- 🕹️ VR Game Section -->
+    <h3 style="margin-top: 3rem;">Game Development</h3>
+
+    <Experience
+      title="Almost Dead – VR Zombie Survival Game"
+      description="“Almost Dead” is a VR zombie survival escape game set in a university campus during a sudden virus outbreak. It challenges players to navigate through intense decision-making and exploration in a 3D immersive environment. Focused on survival, not combat."
+      subtitle="Unity • Virtual Reality • 3D Game"
+      image="/images/vr-almost.png"  <!-- Update with actual image later -->
+    />
+
+    <!-- 💻 Desktop Application Section -->
+    <h3 style="margin-top: 3rem;">Desktop Application</h3>
+
+    <Experience
+      title="Societify – University Society Management Tool"
+      description="Built with C# and SQL, Societify is a collaborative desktop platform that simplifies university society operations. It features task management, event coordination, and communication tools for smoother campus engagement."
+      subtitle="C# • SQL • Windows Desktop App"
+      image="/images/societify.png" <!-- Update with actual image later -->
     />
   </main>
 </Layout>
 
 <style>
-  p,
-  h2 {
+  p, h2, h3 {
     color: var(--color);
   }
 </style>
