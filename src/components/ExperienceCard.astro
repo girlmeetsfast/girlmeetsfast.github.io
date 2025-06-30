@@ -4,9 +4,9 @@ interface Props {
   subtitle: string;
   description: string;
   image: string;
-  links: { text: string; href: string }[];
+  links?: { text: string; href: string }[]; // Make links optional
 }
-const { title, subtitle, description, links, image } = Astro.props;
+const { title, subtitle, description, links = [], image } = Astro.props; // Provide default empty array
 ---
 <div class="wrapper" >
 
@@ -25,7 +25,7 @@ const { title, subtitle, description, links, image } = Astro.props;
   </div>
   <div class="footer">
     {
-      links.map((link) => {
+      links && links.length > 0 && links.map((link) => {
         return (
           <a href={link.href} target="_blank">
             {link.text}
