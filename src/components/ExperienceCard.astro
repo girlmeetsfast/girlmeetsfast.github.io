@@ -3,106 +3,127 @@ interface Props {
   title: string;
   subtitle: string;
   description: string;
-  image: string;
-  links?: { text: string; href: string }[]; // Make links optional
+  image?: string;
+  links?: { text: string; href: string }[];
 }
-const { title, subtitle, description, links = [], image } = Astro.props; // Provide default empty array
+const { title, subtitle, description, links = [], image } = Astro.props;
 ---
-<div class="wrapper" >
 
-<div class="container">
-  <div class="header">
-    <img src={image} alt="" />
-    <div class="title">
-      <h3>{title}</h3>
-      <p>{subtitle}</p>
+<div class="wrapper">
+  <div class="container">
+    <div class="header">
+      {
+        image
+          ? <img src={image} alt={title} />
+          : <div class="default-icon">💼</div>
+      }
+      <div class="title">
+        <h3>{title}</h3>
+        <p>{subtitle}</p>
+      </div>
     </div>
-  </div>
-  <div class="details">
-    <p>
-      {description}
-    </p>
-  </div>
-  <div class="footer">
-    {
-      links && links.length > 0 && links.map((link) => {
-        return (
-          <a href={link.href} target="_blank">
-            {link.text}
-          </a>
-        );
-      })
-    }
+
+    <div class="details">
+      <p>{description}</p>
+    </div>
+
+    {links.length > 0 && (
+      <div class="footer">
+        {links.map((link) => (
+          <a href={link.href} target="_blank">{link.text}</a>
+        ))}
+      </div>
+    )}
   </div>
 </div>
 
-</div>
 <style>
-    .wrapper {
-        border-left: solid 1px var(--color);
-        position: relative;
-    }
-    
-    .wrapper::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 16px;
-        width: 10px;
-        height: 10px;
-        background-color: var(--color);
-        border-radius: 50%;
-        transform: translateX(-50%);
-    }
+  .wrapper {
+    border-left: solid 1px var(--color);
+    position: relative;
+  }
 
-    
+  .wrapper::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color);
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+
   .container {
-    padding: 0% 2rem;
+    padding: 1rem 2rem;
     border-radius: 0.8rem;
     max-width: 600px;
     margin-inline-start: 1.6rem;
     color: var(--color);
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
 
   .header {
     display: flex;
-    position: relative;
-  }
-  .header img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-  .header .title {
-    margin-inline-start: 1rem;
-  }
-  .header .title h3,
-  .header .title p {
-    margin: 0;
-    color: var(--color);
-  }
-  .header .title p {
-    color: var(--text-light);
-    font-size: small;
+    align-items: center;
+    margin-bottom: 0.6rem;
   }
 
-  .details {
+  .header img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .default-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .header .title {
+    margin-inline-start: 0.8rem;
+  }
+
+  .header .title h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--color);
+  }
+
+  .header .title p {
+    margin: 0;
+    font-size: 0.8rem;
     color: var(--text-light);
-    position: relative;
   }
+
+  .details p {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    color: var(--text-light);
+  }
+
   .footer {
-    position: relative;
+    margin-top: 0.5rem;
   }
+
   .footer a {
     color: var(--primary);
-    padding-inline-start: 0;
     text-decoration: none;
-    margin-inline-end: 1rem;
+    margin-right: 1rem;
+    font-size: 0.85rem;
   }
 
   .footer a:hover {
     opacity: 0.8;
-    transition: 1s;
+    transition: 0.3s;
   }
 </style>
