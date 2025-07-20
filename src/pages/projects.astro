@@ -1,92 +1,331 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Experience from "../components/Card.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout title="Projects - Amna Rafi">
   <main>
-    <h2>Designs, Games & Desktop Tools I've Worked On</h2>
-    <p>
-      I’ve explored product design, immersive game development, and desktop applications across various domains. Below are some featured works — from UI/UX projects in Figma to a VR zombie game and a collaborative university platform.
-    </p>
+    <div class="hero-section">
+      <h1>My Projects</h1>
+      <p class="hero-description">
+  Welcome to my project showcase — a curated collection of practical solutions that reflect my expertise in 
+  <span class="highlight">product design</span>, <span class="highlight">UI/UX</span>, and 
+  <span class="highlight">web development</span>. Each project combines thoughtful design, modern technologies, 
+  and real-world functionality — built with a focus on user experience, clean architecture, and visual clarity.
+</p>
 
-    <!-- 🌐 Figma UI/UX Projects -->
-    <h3 style="margin-top: 3rem;">Figma UI/UX Projects</h3>
+    </div>
 
-    <Experience
-      title="Embrace the Future"
-      description="A futuristic interface design showcasing animation, movement, and emotion in modern UI. It explores advanced motion principles and visual storytelling for immersive design systems."
-      subtitle="Figma Prototype"
-      links={[{ text: "View Design", href: "https://www.figma.com/design/ecW83yya3OMCqOaBO5MhlD/animation-circle?node-id=3-2" }]}
-      image="/images/figma1.svg"
-    />
+    <!-- 🎨 UI/UX Design Projects -->
+    <section class="project-section">
+      <div class="section-header">
+        <div class="section-icon">🎨</div>
+        <div>
+          <h2>UI/UX Design</h2>
+          <p>Crafted prototypes and visual experiences using Figma with a focus on clarity and interactivity.</p>
+        </div>
+      </div>
 
-    <Experience
-      title="We Escape: Your Travel Companion"
-      description="A travel booking app with intuitive navigation, personalized experiences, and clean UI. It combines visual clarity with smooth booking flows for travelers."
-      subtitle="Figma Prototype"
-      links={[{ text: "View Design", href: "https://www.figma.com/design/3lqoVp1LYDdCX2SWXogpBM/booking-app?node-id=0-1" }]}
-      image="/images/figma2.svg"
-    />
+    <div class="projects-grid">
+  <ProjectCard
+    title="Embrace the Future"
+    description="A futuristic interface showcasing animation and emotion in modern UI using motion principles."
+    technologies={["Figma", "Motion Design", "Prototyping"]}
+    category="UI/UX"
+    links={[{ text: "View Design", href: "https://www.figma.com/design/ecW83yya3OMCqOaBO5MhlD/animation-circle?node-id=3-2", type: "figma" }]}
+    image="/images/embrace_the_future.png"
+  />
 
-    <Experience
-      title="Login & Connect"
-      description="A minimalist login and signup flow emphasizing user clarity, fast access, and component-based design consistency across platforms."
-      subtitle="Figma Prototype"
-      links={[{ text: "View Design", href: "https://www.figma.com/design/Ua2hqcdVEMYzXolJA3Vs3P/login-signup" }]}
-      image="/images/figma3.svg"
-    />
+  <ProjectCard
+    title="We Escape: Travel Companion"
+    description="Travel booking app with intuitive navigation and personalized UI for smooth booking flows."
+    technologies={["Figma", "User Flow", "Design System"]}
+    category="UI/UX"
+    links={[{ text: "View Design", href: "https://www.figma.com/design/3lqoVp1LYDdCX2SWXogpBM/booking-app?node-id=0-1", type: "figma" }]}
+    image="/images/we_escape.png"
+  />
 
-    <Experience
-      title="Delicious Dash"
-      description="A playful UI concept for a donut and food ordering app, blending delightful colors with bold visuals to enhance user appetite and interaction."
-      subtitle="Figma Prototype"
-      links={[{ text: "View Design", href: "https://www.figma.com/design/IJSjZqdeu7quiXzfbN0LGQ/food-donuts" }]}
-      image="/images/figma4.svg"
-    />
+  <ProjectCard
+    title="Login & Connect"
+    description="A minimalist login/signup flow focusing on user clarity and cross-platform consistency."
+    technologies={["Figma", "Motion Design", "Animations"]}
+    category="UI/UX"
+    links={[{ text: "View Design", href: "https://www.figma.com/design/Ua2hqcdVEMYzXolJA3Vs3P/login-signup", type: "figma" }]}
+    image="/images/login_and_connect.png"
+  />
 
-    <Experience
-      title="Shufti Revamp"
-      description="A redesign concept to improve the interface of Shufti. Focused on usability, simplicity, and brand consistency with clear call-to-action elements."
-      subtitle="Figma Prototype"
-      links={[{ text: "View Design", href: "https://www.figma.com/design/EAdiDiSn7QwpbQL4qdz94Q/shufti-redesigned" }]}
-      image="/images/figma5.svg"
-    />
+  <ProjectCard
+    title="Delicious Dash"
+    description="Playful UI concept for a donut ordering app using bold visuals and delightful colors."
+    technologies={["Figma", "Color Theory", "Mobile UI"]}
+    category="UI/UX"
+    links={[{ text: "View Design", href: "https://www.figma.com/design/IJSjZqdeu7quiXzfbN0LGQ/food-donuts", type: "figma" }]}
+    image="/images/delicious_dash.png"
+  />
 
-    <Experience
-      title="Portfolio Website"
-      description="My personal portfolio website — structured, clean, and responsive. Showcases my work, background, and design philosophy in a compelling layout."
-      subtitle="Figma Prototype"
-      links={[{ text: "View Design", href: "https://www.figma.com/design/OLJu0QPYO8JkujB2xptgoG/portfolio-website?node-id=1-14500" }]}
-      image="/images/figma6.svg"
-    />
+  <ProjectCard
+    title="Shufti Revamp"
+    description="A redesign concept focusing on usability, simplicity, and improved call-to-action elements."
+    technologies={["Figma", "Usability Testing", "Wireframing"]}
+    category="UI/UX"
+    links={[{ text: "View Design", href: "https://www.figma.com/design/EAdiDiSn7QwpbQL4qdz94Q/shufti-redesigned", type: "figma" }]}
+    image="/images/shufti_revamp.png"
+  />
 
-    <!-- 🕹️ VR Game Section -->
-    <h3 style="margin-top: 3rem;">Game Development</h3>
+  <ProjectCard
+    title="Portfolio Website (Figma)"
+    description="Personal portfolio layout showcasing clean structure and visual storytelling."
+    technologies={["Figma", "Typography", "Visual Hierarchy"]}
+    category="UI/UX"
+    links={[{ text: "View Design", href: "https://www.figma.com/design/OLJu0QPYO8JkujB2xptgoG/portfolio-website?node-id=1-14500", type: "figma" }]}
+    image="/images/portfolio_website.png"
+  />
+</div>
 
-    <Experience
-      title="Almost Dead – VR Zombie Survival Game"
-      description="“Almost Dead” is a VR zombie survival escape game set in a university campus during a sudden virus outbreak. It challenges players to navigate through intense decision-making and exploration in a 3D immersive environment. Focused on survival, not combat."
-      subtitle="Unity • Virtual Reality • 3D Game"
-      image="/images/vr-almost.png"
-      links={[]}
-    />
+    </section>
 
-    <!-- 💻 Desktop Application Section -->
-    <h3 style="margin-top: 3rem;">Desktop Application</h3>
+    <!-- 🌐 Web Applications Section -->
+    <section class="project-section">
+      <div class="section-header">
+        <div class="section-icon">🌐</div>
+        <div>
+          <h2>Web Applications</h2>
+          <p>Modern web solutions built with cutting-edge frameworks and responsive design principles.</p>
+        </div>
+      </div>
 
-    <Experience
-      title="Societify – University Society Management Tool"
-      description="Built with C# and SQL, Societify is a collaborative desktop platform that simplifies university society operations. It features task management, event coordination, and communication tools for smoother campus engagement."
-      subtitle="C# • SQL • Windows Desktop App"
-      image="/images/societify.png"
-      links={[]}
-    />
+      <div class="projects-grid">
+        <ProjectCard
+          title="Faisal Ali Khan - Creative Portfolio"
+          description="A VFX/branding portfolio site with galleries and multimedia production. Responsive and engaging."
+          technologies={["HTML", "CSS", "JSS", "Responsive Design"]}
+          category="Portfolio"
+          links={[{ text: "Visit Website", href: "https://faisalalikhan.vercel.app/", type: "website" }]}
+          image="/images/faisal_ali_khan.png"
+          featured={true}
+        />
+
+          <ProjectCard
+    title="Unicorn International - Tools & Knives Store"
+    description="A robust eCommerce platform for Unicorn International, offering a wide range of tools, knives, and jewellery products. Features include detailed product categories such as Damascus Knives, D2 Steel Knives, Rail Rod Spike Knives, Medieval Swords, Jewellery Tools & Wires, and Optical Tools. Built for performance and ease of use."
+    technologies={["React.js", "Tailwind CSS", "Node.js", "Responsive UI"]}
+    category="E-Commerce / Tools & Knives"
+    links={[
+      { text: "GitHub Repository", href: "https://github.com/alimnsr1154/unicorn_International", type: "github" },
+    ]}
+    image="/images/unicorn_international.png"
+  />
+
+
+        <div class="coming-soon-card">
+          <div class="coming-soon-content">
+            <h3>More Projects Coming Soon</h3>
+            <p>Currently working on exciting mobile and web applications that will be showcased here.</p>
+            <div class="progress-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
 
+
 <style>
-  p, h2, h3 {
+  :root {
+    --primary: #6366f1;
+    --primary-rgb: 99, 102, 241;
+    --color: #e2e8f0;
+    --text-light: #94a3b8;
+    --card-bg: rgba(15, 23, 42, 0.6);
+    --border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .hero-section {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--color), var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .highlight {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .project-section {
+    margin-bottom: 4rem;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+  }
+
+  .section-icon {
+    font-size: 2rem;
+    margin-top: 0.2rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
     color: var(--color);
+    margin: 0 0 0.25rem 0;
+  }
+
+  .section-header p {
+    color: var(--text-light);
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .coming-soon-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / -1;
+    height: 200px;
+    border: 2px dashed var(--text-light);
+    border-radius: 1rem;
+    background: rgba(15, 23, 42, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .coming-soon-card:hover {
+    border-color: var(--primary);
+    background: rgba(var(--primary-rgb), 0.1);
+  }
+
+  .coming-soon-content {
+    text-align: center;
+    padding: 1.5rem;
+    max-width: 500px;
+  }
+
+  .coming-soon-content h3 {
+    color: var(--color);
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+  }
+
+  .coming-soon-content p {
+    color: var(--text-light);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .progress-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .progress-dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--primary);
+    opacity: 0.4;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+
+  .progress-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .progress-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    main {
+      padding: 1rem;
+    }
+
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+    }
+
+    .section-header {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .section-icon {
+      font-size: 1.5rem;
+    }
+
+    .coming-soon-card {
+      height: 180px;
+    }
+
+    .coming-soon-content h3 {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
