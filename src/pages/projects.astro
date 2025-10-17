@@ -8,12 +8,11 @@ import ProjectCard from "../components/ProjectCard.astro";
     <div class="hero-section">
       <h1>My Projects</h1>
       <p class="hero-description">
-  Welcome to my project showcase — a curated collection of practical solutions that reflect my expertise in 
-  <span class="highlight">product design</span>, <span class="highlight">UI/UX</span>, and 
-  <span class="highlight">web development</span>. Each project combines thoughtful design, modern technologies, 
-  and real-world functionality — built with a focus on user experience, clean architecture, and visual clarity.
-</p>
-
+        Welcome to my project showcase — a curated collection of practical solutions that reflect my expertise in 
+        <span class="highlight">product design</span>, <span class="highlight">UI/UX</span>, and 
+        <span class="highlight">web development</span>. Each project combines thoughtful design, modern technologies, 
+        and real-world functionality — built with a focus on user experience, clean architecture, and visual clarity.
+      </p>
     </div>
 
     <!-- 🎨 UI/UX Design Projects -->
@@ -26,62 +25,84 @@ import ProjectCard from "../components/ProjectCard.astro";
         </div>
       </div>
 
-    <div class="projects-grid">
-  <ProjectCard
-    title="Embrace the Future"
-    description="A futuristic interface showcasing animation and emotion in modern UI using motion principles."
-    technologies={["Figma", "Motion Design", "Prototyping"]}
-    category="UI/UX"
-    links={[{ text: "View Design", href: "https://www.figma.com/design/ecW83yya3OMCqOaBO5MhlD/animation-circle?node-id=3-2", type: "figma" }]}
-    image="/images/embrace_the_future.png"
-  />
+      <div class="projects-grid">
 
-  <ProjectCard
-    title="We Escape: Travel Companion"
-    description="Travel booking app with intuitive navigation and personalized UI for smooth booking flows."
-    technologies={["Figma", "User Flow", "Design System"]}
-    category="UI/UX"
-    links={[{ text: "View Design", href: "https://www.figma.com/design/3lqoVp1LYDdCX2SWXogpBM/booking-app?node-id=0-1", type: "figma" }]}
-    image="/images/we_escape.png"
-  />
+       <ProjectCard
+          title="Mood Mosaic - Mood Tracker App"
+          description="A mood tracking mobile app designed to help users visualize emotions and build positive mental wellness habits through calming visuals and easy interactions."
+          technologies={["Figma", "Mobile UI", "User Flow"]}
+          category="UI/UX"
+          links={[{ text: "View Design", href: "https://www.figma.com/design/ABI1WIbXRLpCgmqzpUYyWx/MOOD-MOSAIC?node-id=0-1&p=f&t=brMUVD1lY31IFXCj-0", type: "figma" }]}
+          image="/images/mood_mosaic.jpg"
+        />
 
-  <ProjectCard
-    title="Login & Connect"
-    description="A minimalist login/signup flow focusing on user clarity and cross-platform consistency."
-    technologies={["Figma", "Motion Design", "Animations"]}
-    category="UI/UX"
-    links={[{ text: "View Design", href: "https://www.figma.com/design/Ua2hqcdVEMYzXolJA3Vs3P/login-signup", type: "figma" }]}
-    image="/images/login_and_connect.png"
-  />
+       <!-- 🆕 Added Projects -->
+        <ProjectCard
+          title="Infused - Booking Platform Dashboard"
+          description="A professional booking platform dashboard focusing on simplicity, data visualization, and efficient management workflows."
+          technologies={["Figma", "UI Design", "Dashboard UX"]}
+          category="UI/UX"
+          links={[{ text: "View Design", href: "https://www.figma.com/design/PSNfQnmNYEjUqs1qGe5Lpb/iv?node-id=39-534&t=DuDxU1nbCCB8Mq1N-0", type: "figma" }]}
+          image="/images/infused.jpg"
+        />
 
-  <ProjectCard
-    title="Delicious Dash"
-    description="Playful UI concept for a donut ordering app using bold visuals and delightful colors."
-    technologies={["Figma", "Color Theory", "Mobile UI"]}
-    category="UI/UX"
-    links={[{ text: "View Design", href: "https://www.figma.com/design/IJSjZqdeu7quiXzfbN0LGQ/food-donuts", type: "figma" }]}
-    image="/images/delicious_dash.png"
-  />
+          <ProjectCard
+          title="Portfolio Website (Figma)"
+          description="Personal portfolio layout showcasing clean structure and visual storytelling."
+          technologies={["Figma", "Typography", "Visual Hierarchy"]}
+          category="UI/UX"
+          links={[{ text: "View Design", href: "https://www.figma.com/design/OLJu0QPYO8JkujB2xptgoG/portfolio-website?node-id=1-14500", type: "figma" }]}
+          image="/images/portfolio_website.png"
+        />
 
-  <ProjectCard
-    title="Shufti Revamp"
-    description="A redesign concept focusing on usability, simplicity, and improved call-to-action elements."
-    technologies={["Figma", "Usability Testing", "Wireframing"]}
-    category="UI/UX"
-    links={[{ text: "View Design", href: "https://www.figma.com/design/EAdiDiSn7QwpbQL4qdz94Q/shufti-redesigned", type: "figma" }]}
-    image="/images/shufti_revamp.png"
-  />
+       
+        <ProjectCard
+          title="Embrace the Future"
+          description="A futuristic interface showcasing animation and emotion in modern UI using motion principles."
+          technologies={["Figma", "Motion Design", "Prototyping"]}
+          category="UI/UX"
+          links={[{ text: "View Design", href: "https://www.figma.com/design/ecW83yya3OMCqOaBO5MhlD/animation-circle?node-id=3-2", type: "figma" }]}
+          image="/images/embrace_the_future.png"
+        />
 
-  <ProjectCard
-    title="Portfolio Website (Figma)"
-    description="Personal portfolio layout showcasing clean structure and visual storytelling."
-    technologies={["Figma", "Typography", "Visual Hierarchy"]}
-    category="UI/UX"
-    links={[{ text: "View Design", href: "https://www.figma.com/design/OLJu0QPYO8JkujB2xptgoG/portfolio-website?node-id=1-14500", type: "figma" }]}
-    image="/images/portfolio_website.png"
-  />
-</div>
+        <ProjectCard
+          title="We Escape: Travel Companion"
+          description="Travel booking app with intuitive navigation and personalized UI for smooth booking flows."
+          technologies={["Figma", "User Flow", "Design System"]}
+          category="UI/UX"
+          links={[{ text: "View Design", href: "https://www.figma.com/design/3lqoVp1LYDdCX2SWXogpBM/booking-app?node-id=0-1", type: "figma" }]}
+          image="/images/we_escape.png"
+        />
 
+        <ProjectCard
+          title="Login & Connect"
+          description="A minimalist login/signup flow focusing on user clarity and cross-platform consistency."
+          technologies={["Figma", "Motion Design", "Animations"]}
+          category="UI/UX"
+          links={[{ text: "View Design", href: "https://www.figma.com/design/Ua2hqcdVEMYzXolJA3Vs3P/login-signup", type: "figma" }]}
+          image="/images/login_and_connect.png"
+        />
+
+        <ProjectCard
+          title="Delicious Dash"
+          description="Playful UI concept for a donut ordering app using bold visuals and delightful colors."
+          technologies={["Figma", "Color Theory", "Mobile UI"]}
+          category="UI/UX"
+          links={[{ text: "View Design", href: "https://www.figma.com/design/IJSjZqdeu7quiXzfbN0LGQ/food-donuts", type: "figma" }]}
+          image="/images/delicious_dash.png"
+        />
+
+        <ProjectCard
+          title="Shufti Revamp"
+          description="A redesign concept focusing on usability, simplicity, and improved call-to-action elements."
+          technologies={["Figma", "Usability Testing", "Wireframing"]}
+          category="UI/UX"
+          links={[{ text: "View Design", href: "https://www.figma.com/design/EAdiDiSn7QwpbQL4qdz94Q/shufti-redesigned", type: "figma" }]}
+          image="/images/shufti_revamp.png"
+        />
+
+       
+      </div>
     </section>
 
     <!-- 🌐 Web Applications Section -->
@@ -105,17 +126,16 @@ import ProjectCard from "../components/ProjectCard.astro";
           featured={true}
         />
 
-          <ProjectCard
-    title="Unicorn International - Tools & Knives Store"
-    description="A robust eCommerce platform for Unicorn International, offering a wide range of tools, knives, and jewellery products. Features include detailed product categories such as Damascus Knives, D2 Steel Knives, Rail Rod Spike Knives, Medieval Swords, Jewellery Tools & Wires, and Optical Tools. Built for performance and ease of use."
-    technologies={["React.js", "Tailwind CSS", "Node.js", "Responsive UI"]}
-    category="E-Commerce / Tools & Knives"
-    links={[
-      { text: "GitHub Repository", href: "https://github.com/alimnsr1154/unicorn_International", type: "github" },
-    ]}
-    image="/images/unicorn_international.png"
-  />
-
+        <ProjectCard
+          title="Unicorn International - Tools & Knives Store"
+          description="A robust eCommerce platform for Unicorn International, offering a wide range of tools, knives, and jewellery products. Features include detailed product categories such as Damascus Knives, D2 Steel Knives, Rail Rod Spike Knives, Medieval Swords, Jewellery Tools & Wires, and Optical Tools. Built for performance and ease of use."
+          technologies={["React.js", "Tailwind CSS", "Node.js", "Responsive UI"]}
+          category="E-Commerce / Tools & Knives"
+          links={[
+            { text: "GitHub Repository", href: "https://github.com/alimnsr1154/unicorn_International", type: "github" },
+          ]}
+          image="/images/unicorn_international.png"
+        />
 
         <div class="coming-soon-card">
           <div class="coming-soon-content">
