@@ -24,8 +24,37 @@ import ProjectCard from "../components/ProjectCard.astro";
           <p>Crafted prototypes and visual experiences using Figma with a focus on clarity and interactivity.</p>
         </div>
       </div>
-
       <div class="projects-grid">
+        <ProjectCard
+        title="Releaf - Eco-Friendly Shopping App"
+        description="An eco-conscious shopping app that encourages sustainable purchases through personalized recommendations and a clean, nature-inspired design."
+        technologies={["Figma", "UI/UX Design", "Sustainability"]}
+        category="UI/UX"
+        links={[
+          {
+            text: "View Design",
+            href: "https://www.figma.com/design/FJun2mBrbEIopgrJpoLKM7/releaf-an-eco-friendly-shopping-app?node-id=0-1&t=mpcC1EkEL4tBhjH4-1",
+            type: "figma",
+          },
+        ]}
+         image="/images/releaf1.png"
+      />
+
+      <ProjectCard
+        title="Urban Farming - Smart Web Application"
+        description="A modern web application promoting urban agriculture by helping users plan, monitor, and sustain small-scale farms within city environments."
+        technologies={["Figma", "Web UI", "Dashboard Design"]}
+        category="UI/UX"
+        links={[
+          {
+            text: "View Design",
+            href: "https://www.figma.com/design/FJun2mBrbEIopgrJpoLKM7/releaf-an-eco-friendly-shopping-app?node-id=0-1&t=mpcC1EkEL4tBhjH4-1",
+            type: "figma",
+          },
+        ]}
+        image="/images/urban_farming.png"
+      />
+
 
        <ProjectCard
           title="Mood Mosaic - Mood Tracker App"
@@ -36,7 +65,7 @@ import ProjectCard from "../components/ProjectCard.astro";
           image="/images/mood_mosaic.jpg"
         />
 
-       <!-- 🆕 Added Projects -->
+    
         <ProjectCard
           title="Infused - Booking Platform Dashboard"
           description="A professional booking platform dashboard focusing on simplicity, data visualization, and efficient management workflows."
