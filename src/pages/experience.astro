@@ -9,12 +9,14 @@ import Experience from "../components/ExperienceCard.astro";
 
 <Layout title="Experience - Amna Rafi">
   <main>
-    <h2>Employment History</h2>
-    <h2>I have gained hands-on experience by working across diverse domains</h2>
-    <p style="max-width: 80ch;">
-      I enjoy being part of collaborative environments where ideas flow freely, and everyone contributes to building meaningful products. Transparency, adaptability, and open communication are values I deeply appreciate, as they foster creativity, teamwork, and impactful outcomes.
-    </p>
+    <div class="page-hero scroll-reveal">
+      <h1 class="page-title">Experience</h1>
+      <p class="page-subtitle">
+        I enjoy being part of collaborative environments where ideas flow freely, and everyone contributes to building meaningful products. Transparency, adaptability, and open communication are values I deeply appreciate, as they foster creativity, teamwork, and impactful outcomes.
+      </p>
+    </div>
 
+    <div class="timeline">
     <Experience
       title="Web Development Intern at Web3gle, Lahore"
       description="Collaborated with a dynamic team to build modern web solutions, strengthening teamwork and project alignment. Gained hands-on web development experience and industry insights through real-world project contributions."
@@ -35,15 +37,36 @@ import Experience from "../components/ExperienceCard.astro";
       subtitle="May 2024 – August 2024"
       image="/images/code_alpha.jpeg"
     />
+    </div>
   </main>
 </Layout>
 
 <style>
-  h2 {
-    color: var(--color);
+  .page-hero {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
   }
-  p {
-    margin-bottom: 2rem;
-    color: var(--color);
+
+  .page-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .page-subtitle {
+    max-width: 70ch;
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .timeline {
+    padding-left: 0.5rem;
   }
 </style>

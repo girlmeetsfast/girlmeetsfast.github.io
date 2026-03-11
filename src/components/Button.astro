@@ -5,8 +5,8 @@ const { variant } = Astro.props;
 <style>
     button {
         border: none;
-        padding: 8px 18px;
-        border-radius: 0.2rem;
+        padding: 10px 22px;
+        border-radius: 0.4rem;
         font-size: medium;
         cursor: pointer;
         margin-inline-end: 0.4rem;
@@ -14,22 +14,35 @@ const { variant } = Astro.props;
         align-items: center;
         justify-content: center;
         font-family: "Inter", sans;
-        transition: 0.2s ease;
-    }
-    button:hover {
-        opacity: 0.8;
-    }
-    .primary {
-        background-color: var(--primary);
-        color: white;
+        transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* @media (max-width: 768px) {
-        button {
-            padding: 0.6rem 1rem;
-            font-size: small;
-        }
-    } */
+    button:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+    }
+
+    .primary {
+        background: var(--accent-gradient);
+        color: white;
+        font-weight: 600;
+    }
+
+    .primary:hover {
+        box-shadow: 0 4px 20px rgba(139, 92, 246, 0.45);
+        opacity: 1;
+    }
+
+    button:not(.primary) {
+        background: transparent;
+        color: var(--primary-light);
+        border: 1px solid var(--border-color);
+    }
+
+    button:not(.primary):hover {
+        border-color: var(--primary);
+        background: var(--light-bg);
+    }
 </style>
 
 <button class:list={[{ primary: variant === "primary" }]}>

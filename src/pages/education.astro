@@ -5,53 +5,77 @@ import Course from "../components/Course.astro";
 
 <Layout title="Education - Amna Rafi">
   <main>
-    <h2>
-      I have never let my schooling interfare with my education - Mark Twain
-    </h2>
-    <p>
-      I graduated with a BS in Computer Science from FAST - National University of Computer
-      and Emerging Sciences (NUCES) in Islamabad, one of Pakistan's top technology universities.
-      My education provided a strong foundation in software engineering, data structures, algorithms,
-      and systems design.
-    </p>
-    <p>
-      During my time at FAST NUCES, I worked on diverse projects that combined technical development
-      with user-centered design thinking. I studied core CS subjects including <i>Object Oriented Programming</i>,
-      <i>Database Systems</i>, <i>Data Structures & Algorithms</i>, and <i>Software Engineering</i>.
-      I also complemented my formal education with industry certifications and hands-on experience in
-      product design, web development, and cloud technologies.
-    </p>
+    <div class="page-hero scroll-reveal">
+      <h1 class="page-title">Education</h1>
+      <p class="page-quote">"I have never let my schooling interfere with my education" — Mark Twain</p>
+      <p class="page-subtitle">
+        I graduated with a BS in Computer Science from FAST - National University of Computer
+        and Emerging Sciences (NUCES) in Islamabad, one of Pakistan's top technology universities.
+        My education provided a strong foundation in software engineering, data structures, algorithms,
+        and systems design. During my time at FAST NUCES, I worked on diverse projects that combined technical development
+        with user-centered design thinking, and complemented my formal education with industry certifications and hands-on experience.
+      </p>
+    </div>
 
-    <section class="courses">
-      <Course
-        name="UI/UX Design Specialization"
-        university="California Institute of the Arts"
-        link={"#"}
-        icon="/images/coursera.jpeg"
-      />
-      <Course
-        name="User Experience Research and Design"
-        university="University of Michigan"
-        link={"#"}
-        icon="/images/coursera.jpeg"
-      />
-      <Course
-        name="AWS Academy Cloud Foundations"
-        university="Amazon Web Services"
-        link={"#"}
-        icon="/images/coursera.jpeg"
-      />
+    <section class="courses scroll-reveal delay-2">
+      <div class="delay-1">
+        <Course
+          name="UI/UX Design Specialization"
+          university="California Institute of the Arts"
+          link={"#"}
+          icon="/images/coursera.jpeg"
+        />
+      </div>
+      <div class="delay-2">
+        <Course
+          name="User Experience Research and Design"
+          university="University of Michigan"
+          link={"#"}
+          icon="/images/coursera.jpeg"
+        />
+      </div>
+      <div class="delay-3">
+        <Course
+          name="AWS Academy Cloud Foundations"
+          university="Amazon Web Services"
+          link={"#"}
+          icon="/images/coursera.jpeg"
+        />
+      </div>
     </section>
   </main>
 </Layout>
 
 <style>
-  h2 {
-    color: var(--color);
+  .page-hero {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
   }
-  P {
-    margin-bottom: 2rem;
-    color: var(--color);
+
+  .page-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin: 0 0 0.75rem 0;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .page-quote {
+    color: var(--primary-light);
+    font-style: italic;
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+  }
+
+  .page-subtitle {
+    max-width: 70ch;
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
   }
 
   .courses {

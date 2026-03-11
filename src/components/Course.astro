@@ -8,8 +8,11 @@ interface Props {
 const { icon, name, university, link } = Astro.props;
 ---
 
-<div class="container">
-  <img src={icon} alt="" />
+<div class="container scroll-reveal">
+  {icon && icon !== '/images/coursera.jpeg'
+    ? <img src={icon} alt="" />
+    : <div class="icon-fallback">🎓</div>
+  }
   <div class="details">
     <h4 class="title">{name}</h4>
     <p class="uni-name">{university}</p>
@@ -21,19 +24,33 @@ const { icon, name, university, link } = Astro.props;
   .container {
     display: flex;
     justify-content: start;
-    padding: 8px;
+    padding: 12px;
     border-radius: 0.8rem;
     color: var(--color);
     width: 100%;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
   }
   .container:hover {
-    background-color: var(--light-bg);
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    transform: translateY(-3px);
   }
 
-  .container > img {
+  .container > img,
+  .icon-fallback {
     width: 60px;
     height: 60px;
     border-radius: 0.8rem;
+    flex-shrink: 0;
+  }
+
+  .icon-fallback {
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
   }
 
   .details {
@@ -55,5 +72,10 @@ const { icon, name, university, link } = Astro.props;
     padding-inline-start: 0;
     text-decoration: none;
     margin-inline-end: 1rem;
+    transition: color 0.25s ease;
+  }
+
+  a:hover {
+    color: var(--primary-light);
   }
 </style>

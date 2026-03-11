@@ -42,9 +42,13 @@ const { title, subtitle, description, links, image } = Astro.props;
     max-width: 600px;
     margin-bottom: 1rem;
     color: var(--color);
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
   }
   .container:hover {
     background-color: var(--light-bg);
+    border-color: var(--border-color);
+    transform: translateY(-2px);
   }
 
   .header {
@@ -69,7 +73,7 @@ const { title, subtitle, description, links, image } = Astro.props;
   }
   .details {
     color: var(--text-light);
-    }
+  }
   .footer a {
     border: none;
     background-color: transparent;
@@ -78,5 +82,10 @@ const { title, subtitle, description, links, image } = Astro.props;
     padding-inline-start: 0;
     text-decoration: none;
     margin-inline-end: 1rem;
+    transition: color 0.25s ease;
+  }
+
+  .footer a:hover {
+    color: var(--primary-light);
   }
 </style>

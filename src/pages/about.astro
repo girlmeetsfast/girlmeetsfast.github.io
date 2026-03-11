@@ -4,32 +4,284 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="About Me - Amna Rafi">
   <main>
-    <p>
-      I'm Amna Rafi, a graduate Computer Science student from FAST NUCES, with a strong passion for building impactful digital products that combine thoughtful design and robust engineering.
-    </p>
-    <p>
-      My experience lies at the intersection of product design, web development, and user experience. I've contributed to real-world projects such as an e-commerce fashion platform and a visual mood-tracking app—leading everything from wireframing and usability testing to full-stack development using the MERN stack.
-    </p>
-    <p>
-      I’ve completed internships in both web development and product design, where I worked in cross-functional agile teams, translating user needs into intuitive solutions and scalable systems. My work reflects a user-first mindset, an eye for detail, and the ability to collaborate effectively across disciplines.
-    </p>
-    <p>
-      Outside of tech, I’m passionate about fashion styling, digital art, and content creation. I enjoy blending creativity with structure—whether that’s in user journeys or visual storytelling.
-    </p>
+    <!-- About Hero Section -->
+    <section class="about-hero">
+      <div>
+        <h1 class="about-title">
+          <span class="gradient-text">About Me</span>
+        </h1>
+        <p class="about-tagline">Designer. Developer. Problem solver.</p>
+      </div>
+    </section>
+
+    <!-- Bio Blocks Section -->
+    <section class="bio-blocks">
+      <div class="bio-block scroll-reveal delay-1">
+        <h2 class="bio-label">Who I am</h2>
+        <p>
+          I’m Amna Rafi, a Computer Science graduate from FAST NUCES with a passion for building impactful digital products that combine thoughtful design and robust engineering.
+        </p>
+      </div>
+
+      <div class="bio-block scroll-reveal delay-2">
+        <h2 class="bio-label">What I do</h2>
+        <p>
+          My experience lies at the intersection of product design, web development, and user experience. I’ve contributed to real-world projects such as an e-commerce fashion platform and a visual mood-tracking app, leading everything from wireframing in Figma to full-stack development with the MERN stack.
+        </p>
+      </div>
+
+      <div class="bio-block scroll-reveal delay-3">
+        <h2 class="bio-label">How I work</h2>
+        <p>
+          I’ve completed internships in web development and product design, working in cross-functional agile teams to translate user needs into intuitive solutions. I bring a user-first mindset, strong attention to detail, and the ability to collaborate across disciplines.
+        </p>
+      </div>
+
+      <div class="bio-block scroll-reveal delay-4">
+        <h2 class="bio-label">Beyond tech</h2>
+        <p>
+          Outside of work, I’m passionate about fashion styling, digital art, and content creation. I enjoy blending creativity with structure — whether in user journeys or visual storytelling.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section scroll-reveal delay-2">
+      <h2 class="skills-title">Skills & Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Design</h3>
+          <div class="skill-chips">
+            <span class="chip">Figma</span>
+            <span class="chip">UI/UX Design</span>
+            <span class="chip">Wireframing</span>
+            <span class="chip">Prototyping</span>
+            <span class="chip">User Research</span>
+            <span class="chip">Design Systems</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Development</h3>
+          <div class="skill-chips">
+            <span class="chip">React.js</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">MongoDB</span>
+            <span class="chip">Express.js</span>
+            <span class="chip">HTML / CSS</span>
+            <span class="chip">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Process</h3>
+          <div class="skill-chips">
+            <span class="chip">Agile / Scrum</span>
+            <span class="chip">Trello</span>
+            <span class="chip">Product Thinking</span>
+            <span class="chip">Usability Testing</span>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
 
 <style>
-  p {
-    max-width: 90ch;
+  /* About Hero Section */
+  .about-hero {
+    margin-bottom: 5rem;
+    padding: 3rem 0;
+  }
+
+  .about-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .about-tagline {
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: var(--primary-light);
+    margin: 0.5rem 0 0 0;
+  }
+
+  /* Bio Blocks */
+  .bio-blocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+  }
+
+  .bio-block {
+    padding: 2rem;
+    background: var(--surface);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+
+  .bio-block p {
     color: var(--color);
+    line-height: 1.6;
+    margin: 0;
   }
-  p a {
+
+  .bio-label {
+    font-size: 1.3rem;
+    font-weight: 600;
     color: var(--primary);
+    margin-bottom: 1rem;
+    margin-top: 0;
   }
+
+  /* Skills Section */
+  .skills-section {
+    padding: 3rem;
+    background: var(--surface);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+
+  .skills-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: var(--heading);
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .skill-category h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+
+  .skill-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .chip {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--primary);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* Scroll Reveal Animations */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: reveal 0.6s ease-out forwards;
+  }
+
+  .delay-1 {
+    animation-delay: 0.1s;
+  }
+
+  .delay-2 {
+    animation-delay: 0.2s;
+  }
+
+  .delay-3 {
+    animation-delay: 0.3s;
+  }
+
+  .delay-4 {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2.5rem;
+    }
+
+    .about-tagline {
+      font-size: 1rem;
+    }
+
+    .bio-blocks {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .skills-section {
+      padding: 2rem;
+    }
+
+    .skills-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
   @media (max-width: 450px) {
-    p {
-      font-size: small;
+    .about-hero {
+      margin-bottom: 3rem;
+      padding: 1.5rem 0;
+    }
+
+    .about-title {
+      font-size: 2rem;
+    }
+
+    .about-tagline {
+      font-size: 0.95rem;
+    }
+
+    .bio-block {
+      padding: 1.5rem;
+    }
+
+    .bio-label {
+      font-size: 1.1rem;
+    }
+
+    .skills-section {
+      padding: 1.5rem;
+    }
+
+    .skills-title {
+      font-size: 1.5rem;
+    }
+
+    .chip {
+      font-size: 0.85rem;
+      padding: 0.4rem 0.8rem;
     }
   }
 </style>

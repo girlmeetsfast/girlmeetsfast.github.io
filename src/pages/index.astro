@@ -7,7 +7,7 @@ import Button from "../components/Button.astro";
   title="Amna Rafi - UI/UX Designer | Product Analyst | MERN Stack Developer | "
 >
   <main>
-    <h1>
+    <h1 class="scroll-reveal">
       <span class="hello-span">
         <div class="gopher">
           <img
@@ -27,7 +27,7 @@ import Button from "../components/Button.astro";
       </span>
       I am <span class="text-gradient">Amna</span>
     </h1>
-   <div class="text-container">
+   <div class="text-container scroll-reveal delay-1">
       <p class="description">
         I'm a Computer Science graduate from FAST NUCES with a strong foundation in product design, 
         full-stack development, and agile methodologies. My experience spans both technical execution 
@@ -47,12 +47,36 @@ import Button from "../components/Button.astro";
         help drive meaningful outcomes and continuous product improvement.
       </p>
     </div>
-    <a href="/experience">
-      <Button variant="primary">Experience</Button>
-    </a>
-    <a href="/about">
-      <Button>More about me</Button>
-    </a>
+    <div class="skills-row scroll-reveal delay-2">
+      <span class="skill-chip">Product Design</span>
+      <span class="skill-chip">UI/UX</span>
+      <span class="skill-chip">MERN Stack</span>
+      <span class="skill-chip">Figma</span>
+      <span class="skill-chip">React.js</span>
+    </div>
+    <div class="button-row scroll-reveal delay-3">
+      <a href="/experience">
+        <Button variant="primary">Experience</Button>
+      </a>
+      <a href="/about">
+        <Button>More about me</Button>
+      </a>
+    </div>
+    <section class="contact-cta scroll-reveal">
+      <div class="cta-inner">
+        <div class="cta-orb"></div>
+        <p class="cta-label">Open to opportunities</p>
+        <h2 class="cta-heading">Let's build something <span class="gradient-text">meaningful</span> together.</h2>
+        <p class="cta-body">
+          Whether you're looking for a product designer, a developer, or someone who can bridge both —
+          I'd love to connect. Reach out via email or LinkedIn!
+        </p>
+        <div class="cta-actions">
+          <a href="mailto:amnarafi43@gmail.com" class="cta-button primary">Send an Email</a>
+          <a href="https://www.linkedin.com/in/amna-rafi-93966a270/" target="_blank" class="cta-button ghost">LinkedIn</a>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
 <script>
@@ -86,11 +110,16 @@ import Button from "../components/Button.astro";
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: 0% center; }
+    100% { background-position: 200% center; }
   }
   .description {
-    color: var(--color);
+    color: var(--text-light);
   }
 
   .ml-1 {
@@ -170,7 +199,137 @@ import Button from "../components/Button.astro";
     border-radius: 50%;
   }
 
-  @media (max-width: 450px) { 
+  .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1.5rem 0;
+  }
+
+  .skill-chip {
+    background: var(--light-bg);
+    border: 1px solid var(--border-color);
+    color: var(--primary-light);
+    padding: 0.35rem 0.9rem;
+    border-radius: 2rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    transition: background 0.25s ease, border-color 0.25s ease;
+  }
+
+  .skill-chip:hover {
+    background: rgba(139, 92, 246, 0.18);
+    border-color: var(--primary);
+  }
+
+  .contact-cta {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-inner {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 1.5rem;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+  }
+
+  .cta-orb {
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .cta-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--primary-light);
+    margin: 0 0 0.75rem 0;
+  }
+
+  .cta-heading {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 800;
+    color: var(--color);
+    margin: 0 0 1rem 0;
+    line-height: 1.3;
+  }
+
+  .gradient-text {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cta-body {
+    max-width: 55ch;
+    margin: 0 auto 2rem auto;
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.8rem;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  }
+
+  .cta-button.primary {
+    background: var(--accent-gradient);
+    color: white;
+  }
+
+  .cta-button.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 24px rgba(139, 92, 246, 0.4);
+  }
+
+  .cta-button.ghost {
+    background: transparent;
+    color: var(--primary-light);
+    border: 1px solid var(--border-color);
+  }
+
+  .cta-button.ghost:hover {
+    border-color: var(--primary);
+    background: var(--light-bg);
+    transform: translateY(-3px);
+  }
+
+  .button-row {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  @media (max-width: 450px) {
     h1 {
     font-size: calc(2rem);
     margin: 0;
@@ -182,7 +341,20 @@ import Button from "../components/Button.astro";
 
   main {
     padding-top: 1.5rem;
-  }   
+  }
+
+  .cta-button {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.4rem;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  .button-row a {
+    width: 100%;
+  }
   }
 
 </style>
