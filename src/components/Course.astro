@@ -9,7 +9,7 @@ const { icon, name, university, link } = Astro.props;
 ---
 
 <div class="container scroll-reveal">
-  {icon && icon !== '/images/coursera.jpeg'
+  {icon && icon !== '/images/logos/coursera.jpeg'
     ? <img src={icon} alt="" />
     : <div class="icon-fallback">🎓</div>
   }
